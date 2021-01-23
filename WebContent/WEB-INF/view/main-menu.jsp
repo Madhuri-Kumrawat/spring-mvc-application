@@ -1,12 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/style.css">
 </head>
 <body>
-<h2>Spring MVc DEmo-Home PAge</h2>
+	<img src="${pageContext.request.contextPath}/resources/images/logo.png" width="40" height="40" />
+	<h2>Spring MVc DEmo-Home PAge</h2>
+	<hr />
+	<a href="showForm">Show Form</a>
 </body>
 </html>
