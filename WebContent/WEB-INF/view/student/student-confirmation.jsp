@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Your Form</title>
+<title>Student Confirmation</title>
 </head>
 <body>
-	<form action="processFormV3" method="GET">
-		<input type="text" name="studentName" placeholder="What's your Name?">
-		<input type="submit">
-	</form>
+	<h2>Student is Confirmed: ${student.firstName} ${student.lastName}</h2>
+	<br/>
+	<br/>
+	Country:${student.country }
 </body>
 </html>

@@ -12,6 +12,9 @@
 	<img src="${pageContext.request.contextPath}/resources/images/logo.png" width="40" height="40" />
 	<h2>Spring MVc DEmo-Home PAge</h2>
 	<hr />
-	<a href="showForm">Show Form</a>
+	<a href="home/showForm">Show Form</a>
+	
+	<br/>
+	<a href="student/stdForm">Student Form</a>
 </body>
 </html>
