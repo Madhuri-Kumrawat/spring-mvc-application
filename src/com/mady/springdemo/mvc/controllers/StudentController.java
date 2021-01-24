@@ -1,7 +1,10 @@
 package com.mady.springdemo.mvc.controllers;
 
+import java.util.Iterator;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +16,10 @@ import com.mady.springdemo.mvc.models.Student;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
+	
+	@Value("#{countryOptions}") 
+	private Map<String, String> countryOptions;
+	
 	// Need a controller method to show a form
 	@RequestMapping("/stdForm")
 	public String stdForm(Model theModel) {
@@ -21,7 +28,9 @@ public class StudentController {
 
 		// Add Student object to the model
 		theModel.addAttribute("student", theStudent);
-
+		
+		// Add Student object to the model
+		theModel.addAttribute("theCountryOptions", countryOptions);
 		return "student/student-form";
 	}
 
@@ -30,6 +39,12 @@ public class StudentController {
 	public String processFormV3(@ModelAttribute("student") Student theStudent) {
 		//log the input data
 		System.out.println("Student NAme : "+theStudent.getFirstName()+" "+ theStudent.getLastName());
+		int count=0;
+		while ( count<theStudent.getOperatingSystems().length) {
+			System.out.println("student OS: "+theStudent.getOperatingSystems()[count]);
+			count++;
+		}
+		
 		return "student/student-confirmation";
 	}
 }

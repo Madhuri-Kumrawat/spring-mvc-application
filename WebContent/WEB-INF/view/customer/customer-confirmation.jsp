@@ -9,15 +9,9 @@
 <title>Student Confirmation</title>
 </head>
 <body>
-	<h2>Student is Confirmed: ${student.firstName} ${student.lastName}</h2>
-	<br />
-	<br /> Country:${student.country }
-	<br />
-	<br /> Operating Systems:
-	<ul>
-		<c:forEach var="temp" items="${student.operatingSystems}">
-			<li>${temp}</li>
-		</c:forEach>
-	</ul>
+	<h2>Customer is Confirmed: ${customer.firstName} ${customer.lastName}</h2>
+	<h4> ${customer.courseCode }</h4>
+<br />
+	
 </body>
 </html>
